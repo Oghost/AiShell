@@ -1,0 +1,57 @@
+{
+  "model": {
+    "quantization": "INT8",
+    "maxMemoryMB": 2048,
+    "enableCuda": false,
+    "enableDirectML": true,
+    "enableOpenVINO": false,
+    "modelPath": "Models/phi-3.5-mini-instruct-int8.onnx"
+  },
+  "ui": {
+    "theme": "default",
+    "showBanner": true,
+    "showProgressBars": true,
+    "maxOutputLines": 1000,
+    "enableColors": true,
+    "promptStyle": "modern"
+  },
+  "security": {
+    "safeMode": true,
+    "requireConfirmation": true,
+    "allowElevation": true,
+    "trustedSoftwareOnly": false,
+    "maxCommandLength": 500
+  },
+  "learning": {
+    "enableLearning": true,
+    "shareKnowledge": true,
+    "maxLearningHistory": 1000,
+    "autoSaveInterval": 300
+  },
+  "plugins": {
+    "enableBuiltIn": true,
+    "autoInstallDependencies": false,
+    "pluginTimeout": 30
+  },
+  "cloud": {
+    "enableCloudLLM": false,
+    "openaiApiKey": "",
+    "claudeApiKey": "",
+    "geminiApiKey": "",
+    "defaultProvider": "local"
+  },
+  "performance": {
+    "maxConcurrentCommands": 1,
+    "commandTimeout": 120,
+    "cacheSize": 100,
+    "enableTelemetry": false
+  },
+  "updates": {
+    "checkForUpdates": true,
+    "autoUpdate": false,
+    "updateChannel": "stable"
+  },
+  "version": "1.0.0",
+  "createdAt": "2025-06-01T22:12:00Z",
+  "lastUpdated": "2025-06-01T22:12:00Z"
+}

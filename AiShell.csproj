@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PublishAot>False</PublishAot>
+		<AssemblyTitle>AiShell - Terminal Inteligente para Windows</AssemblyTitle>
+		<AssemblyDescription>Terminal con IA local usando Phi-3.5 y onnxruntime</AssemblyDescription>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<Copyright>© 2025 Oghost</Copyright>
+
+		<!-- Optimizaciones Native AOT -->
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<TrimMode>partial</TrimMode>
+		<SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ML.OnnxRuntimeGenAI.Cuda" Version="0.5.1" />
+		<PackageReference Include="System.Management" Version="10.0.0-preview.4.25258.110" />
+		<PackageReference Include="Spectre.Console" Version="0.50.1-preview.0.9" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0-preview.4.25258.110" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0-preview.4.25258.110" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.0-preview.4.25258.110" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Config\*.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Models\*.onnx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
